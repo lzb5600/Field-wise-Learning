@@ -1,6 +1,6 @@
 # Field-wise Learning for Multi-field Categorical Data
 
-This repository is the official implementation of [Field-wise Learning for Multi-field Categorical Data](https://arxiv.org/abs/2030.12345). 
+This repository is the official implementation of [Field-wise Learning for Multi-field Categorical Data](https://nips.cc/virtual/2020/public/poster_7078971350bcefbc6ec2779c9b84a9bd.html). 
 
 ## Requirements
 The code has been tested with:
@@ -21,6 +21,10 @@ The code has been tested with:
 For example, to train the model on Criteo datasets, run:
 ```run
 python run_fwl.py  --dataset-path ./data/criteo/train.csv --ebd-dim 1.6 --log-ebd --lr 0.01 --wdcy 1e-6 --include-linear --reg-lr 1e-3 --reg-mean --reg-adagrad
+```
+to train the model on Avazu datasets, run:
+```run
+python run_fwl.py  --dataset-path ./data/avazu/train.csv --ebd-dim 10 --lr 0.05 --wdcy 1e-8 --reg-lr 1e-6 --reg-mean 
 ```
 ## Citation
 If you find this repository helpful, please consider to cite the following paper:
