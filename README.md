@@ -29,5 +29,16 @@ python run_fwl.py  --dataset-path ./data/avazu/train.csv --ebd-dim 10 --lr 0.05 
 ## Citation
 If you find this repository helpful, please consider to cite the following paper:
 ```
+@inproceedings{NEURIPS2020_70789713,
+ author = {Li, Zhibin and Zhang, Jian and Gong, Yongshun and Yao, Yazhou and Wu, Qiang},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {9890--9899},
+ publisher = {Curran Associates, Inc.},
+ title = {Field-wise Learning for Multi-field Categorical Data},
+ url = {https://proceedings.neurips.cc/paper/2020/file/7078971350bcefbc6ec2779c9b84a9bd-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
 
 ```
