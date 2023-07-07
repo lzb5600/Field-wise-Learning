@@ -10,6 +10,7 @@ from pathlib import Path
 import lmdb
 import numpy as np
 import torch.utils.data
+import os.path
 from tqdm import tqdm
 
 
@@ -32,6 +33,7 @@ class AvazuDataset(torch.utils.data.Dataset):
     def __init__(self, dataset_path=None, cache_path='.avazu', rebuild_cache=False, min_threshold=4):
         self.NUM_FEATS = 22
         self.min_threshold = min_threshold
+        cache_path = os.path.dirname(dataset_path)+ "/" + cache_path
         if rebuild_cache or not Path(cache_path).exists():
             shutil.rmtree(cache_path, ignore_errors=True)
             if dataset_path is None:
