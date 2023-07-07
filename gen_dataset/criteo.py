@@ -12,6 +12,7 @@ from pathlib import Path
 import lmdb
 import numpy as np
 import torch.utils.data
+import os.path
 from tqdm import tqdm
 
 
@@ -37,6 +38,7 @@ class CriteoDataset(torch.utils.data.Dataset):
         self.NUM_FEATS = 39
         self.NUM_INT_FEATS = 13
         self.min_threshold = min_threshold
+        cache_path = os.path.dirname(dataset_path) + "/" + cache_path
         if rebuild_cache or not Path(cache_path).exists():
             shutil.rmtree(cache_path, ignore_errors=True)
             if dataset_path is None:
